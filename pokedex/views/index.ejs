@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body class="flex">
+
+    <nav id="nav_bar" class="flex">
+        <h1>Pokedex</h1>
+        <button>Add New Pokemon</button>
+    </nav>
+    
+    <section class="flex">
+
+    <% data.forEach((element,i) => { %>
+       <% if(i <= 58 ){ %>
+    <div>
+        <h2> <%= element.name %> </h2>
+        <img src="<%= element.img %>" alt="">
+    </div>
+    <% } }); %>
+
+    </section>
+
+
+</body>
+</html>
