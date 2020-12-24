@@ -2,9 +2,9 @@
     display: flex;
 }
 body{
-    background-color: #141d26;
     flex-direction: column;
     align-items: center;
+    background-color: #141d26;
 }
 
 #nav_bar{
@@ -15,6 +15,7 @@ body{
 #nav_bar h1{
     flex-grow: 2;
     margin-left: 2%;
+    font-size: 1.3em;
 }
 
 #nav_bar button{
@@ -29,28 +30,37 @@ body{
 
 }
 section{
+    background-color: #ffffff;
     margin-top: 5%;
     width: 100%;
     flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+section .card{
+    width: 300px;
+    min-width: 500px;
     justify-content: center;
-
-}
-section div{
-   width: 200px;
-   height: 300px;
-   background-color: #ffffff;
-   margin: 1%;
-   box-shadow: 5px 3px 5px #ffffffde;
-   border: 2px solid black;
+    flex-grow: 1;
 }
 
-section div h2{
+section .card h2{
     text-align: center;
-    width: 100%;
 }
 
-section div img{
-    width: 100%;
-    height: 70%;
+section .info{
+    min-width: 500px;
+    margin-top: 5%;
+    flex-grow: 3;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
+
+section .info div{
+    
+    margin: 5%;
+}
+
 

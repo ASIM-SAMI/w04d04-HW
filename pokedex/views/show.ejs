@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/show.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="flex">
+    <nav id="nav_bar" class="flex">
+        <h1>Pokedex Entry - <%= data.name %></h1>
+        <button>Add New Pokemon</button>
+    </nav>
+
+
+       <section class="flex">
+           <div class="card flex">
+           <div>
+
+            <h2> <%= data.name %> </h2>
+            <img src="<%= data.img %>" alt="">
+
+           </div>
+
+          </div>
+          <div class="info flex">
+           <div>
+               <h1>Stats:</h1>
+
+               <% for(key in data.stats){ %> 
+               <%= key %>: <%= data.stats[key] %><br>
+               <% } %>
+
+               <h2>Type:</h2>
+
+               <p>
+                <% for(key in data.type){ %> 
+                    <%= data.type[key] %><br>
+                    <% } %>
+               </p>
+               
+           </div>
+
+           <div>
+               <h1>Damages:</h1>
+
+               <% for(key in data.damages){ %> 
+               <%= key %>: <%= data.damages[key] %><br>
+               <% } %>
+               
+           </div>
+
+        </div>
+        </section>
+</body>
+</html>
